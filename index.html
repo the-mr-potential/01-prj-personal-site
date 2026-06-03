@@ -2,10 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asher's Homepage</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Simple, beginner-friendly personal site structure -->
+
+  <!-- Centered navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#favorites">Favorites</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- Hero: text on the left, placeholder image on the right -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Asher's Homepage</h1>
+        <p class="lead">Hi — I'm Asher. I'm learning web development and building projects for my portfolio.</p>
+        <p class="cta">Explore my work below.</p>
+      </div>
+      <div class="hero-image">
+        <!-- External placeholder image so you can replace it later with your own screenshot -->
+        <img src="img/gojo.jpeg" alt="Placeholder project preview">
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>Computer Science + Applied Computing @ UNO · building things, breaking things, fixing things · anime</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>UI/UX Design</li>
+        <li>Figma</li>
+        <li>Web Development</li>
+        <li>HTML/CSS/JS</li>
+        <li>Linux & Self-Hosting</li>
+        <li>Docker</li>
+        <li>Networking</li>
+        <li>Git & GitHub</li>
+        <li>Technical Documentation</li>
+        <li>Human-Centered Design</li>
+        <li>Python</li>
+        <li>C#</li>
+        <li>Unity</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <p>Below are a few projects that I wanted to highlight. I have not updated my GitHub profile recently; will soon!</p>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Self-Hosting</h3>
+          <p>Self-hosted media server stack built on Proxmox and Docker, featuring Jellyfin, automated content management via Sonarr/Radarr/Lidarr, and secure remote access through a reverse proxy.</p>
+          <ul class="skills-list">
+            <li>Proxmox</li>
+            <li>Docker</li>
+            <li>Jellyfin</li>
+            <li>Sonarr/Radarr/Lidarr</li>
+            <li>Nginx Reverse Proxy</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <h3>Banking App for an aging population</h3>
+          <p>A simplified, all-in-one mobile app that helps older adults independently handle banking, email, shopping, and more through large buttons, guided instructions, and a direct “Help Me” connection to family.</p>
+          <ul class="skills-list">
+            <li>UI/UX Design</li>
+            <li>Figma</li>
+            <li>Human-Centered Design</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <h3>Flappy Bird Game</h3>
+          <p>A classic Flappy Bird clone built in C# using Unity, where players tap to keep a bird airborne while navigating through gaps in a series of pipes. One wrong move and it’s game over — simple to learn, tough to master.</p>
+          <ul class="skills-list">
+            <li>C#</li>
+            <li>Unity</li>
+            <li>Game Development</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Favorites -->
+    <section id="favorites" class="section">
+      <h2>Favorites</h2>
+      <p>Things I enjoy: coding, coffee, music, and learning new tools.</p>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/320x180.png?text=Coding" alt="Coding favorite image">
+          </div>
+          <h3 class="project-title">Anime</h3>
+          <p>I enjoy building small apps and learning new languages every semester.</p>
+        </article>
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/320x180.png?text=Coffee" alt="Coffee favorite image">
+          </div>
+          <h3 class="project-title">Coffee</h3>
+          <p>Good coffee helps me stay focused while I design and code in class.</p>
+        </article>
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/320x180.png?text=Music" alt="Music favorite image">
+          </div>
+          <h3 class="project-title">Music</h3>
+          <p>Music keeps my energy up while I work through ideas and new project layouts.</p>
+        </article>
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/320x180.png?text=Self+Hosting" alt="Self-hosting favorite image">
+          </div>
+          <h3 class="project-title">Self-Hosting</h3>
+          <p>I enjoy setting up servers, Docker, and home lab tools to run my own services safely.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Asher — Built for learning.</p>
+  </footer>
+
 </body>
 </html>

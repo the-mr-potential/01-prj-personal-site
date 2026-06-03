@@ -1,1 +1,95 @@
-/* Add you CSS here */
+/* Optimized beginner-friendly CSS: variables, combined rules, and reuse */
+
+:root {
+	--max-width: 1000px;
+	--page-bg: #f7f7fb;
+	--card-bg: #ffffff;
+	--text: #222;
+	--muted: #666;
+	--accent: #2b6cb0;
+	--skill-bg: #eef2ff;
+	--radius: 8px;
+	--shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+	--shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+	--container-pad: 24px;
+	--hero-bg: linear-gradient(135deg, rgba(99,102,106,0.55), rgba(229,231,235,0.18)), radial-gradient(circle at 20% 20%, rgba(148,163,184,0.28), transparent 28%), radial-gradient(circle at 80% 10%, rgba(148,163,184,0.12), transparent 25%);
+}
+
+/* Reset and global */
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	line-height: 1.5;
+	color: var(--text);
+	background: var(--page-bg);
+}
+
+.container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: var(--container-pad);
+}
+
+/* Navigation */
+.main-nav { background: var(--card-bg); padding: 12px 0; box-shadow: var(--shadow-sm); }
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 18px; }
+.main-nav a { color: #333; text-decoration: none; font-weight: 600; }
+.main-nav a:hover { text-decoration: underline; }
+
+/* Reusable media styles */
+.media-img { width: 100%; height: auto; border-radius: calc(var(--radius) - 2px); display: block; box-shadow: var(--shadow-md); }
+
+/* Hero */
+.hero {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 40px; /* added full padding so content has space on all sides */
+	background: var(--hero-bg);
+	border-radius: calc(var(--radius) + 2px);
+}
+.hero-text { flex: 1; }
+.hero-text h1 { margin: 0 0 8px 0; font-size: 2rem; }
+.lead { margin: 0 0 12px 0; color: #444; }
+.cta { color: var(--accent); font-weight: 600; }
+.hero-image { flex: 1; display: flex; justify-content: center; }
+.hero-image img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md); }
+
+/* Sections */
+.section { background: var(--card-bg); margin: 16px 0; padding: 18px; border-radius: var(--radius); box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.section h2 { margin-top: 0; }
+
+.skills-list { display: flex; gap: 12px; flex-wrap: wrap; padding: 0; list-style: none; margin: 0; }
+.skills-list li { background: var(--skill-bg); padding: 8px 12px; border-radius: 999px; font-weight: 600; }
+
+/* Projects */
+.projects-grid {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.project-card {
+	background: var(--card-bg);
+	padding: 16px;
+	border-radius: var(--radius);
+	flex: 1 1 calc(33.333% - 16px);
+	min-width: 260px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.project-image { margin-bottom: 12px; }
+.project-card img { width: 100%; border-radius: 6px; display: block; }
+.project-title { margin: 0 0 12px; font-size: 1.2rem; }
+
+.site-footer { text-align: center; padding: 18px 0; color: var(--muted); font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 700px) {
+	.hero { flex-direction: column; text-align: center; }
+	.hero-text { order: 1; }
+	.hero-image { order: 2; }
+	.container { padding: 16px; }
+}
+
+/* End optimized styles */
